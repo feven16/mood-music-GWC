@@ -1,0 +1,116 @@
+.title{
+  margin-top: 80px;
+  font-size: 30px;
+  font-family: monospace;
+  text-align: center;
+}
+
+h2{
+  font-size: 30px;
+  font-family: monospace;
+}
+
+#F{
+  float: left;
+}
+
+#A{
+  margin: auto;
+}
+
+#R{
+  float: right;
+}
+
+.bio{
+  background-color: white;
+  text-align: center;
+  width: 375px;
+  border-style: groove;
+  margin: auto;
+  height: auto;
+  margin-top: 0px;
+  font-family: monospace;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+h3{
+  font-size: 20px;
+}
+.group {
+  background-color: white;
+  text-align: center;
+  border-style: groove;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 800px;
+  height: auto;
+  padding-left: 5px;
+  padding right: 5px;
+  }
+p{
+  font-size: 15px;
+}
+#FY{
+  height: 200px;
+  width: 200px;
+}
+.main {
+    margin-left: 50px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+    font-style: roma
+}
+
+/* Style the navbar NAME*/
+#navbarName {
+  overflow: hidden;
+  background-color: dimgrey;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 45px;
+  font-size: 20px;
+  font-family: monospace;
+  padding: 14px 5px 5px 10px;
+}
+
+/* Navbar links */
+#navbarName a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 75px 75px 40px;
+  text-decoration: none;
+  font-family: monospace;
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    #navbar a {padding-top: 15px 5px 10px 10px;}
+    #navbar a {font-size: 18px;}
+}
+
+/* When you mouse over the nav bar links, change their color */
+#navbarName a:hover {
+    color: black;
+}

@@ -1,0 +1,169 @@
+<DOCTYPE! html>
+<html>
+<head>
+  <link rel = "stylesheet" href = "aboutPG.css">
+</head>
+<body>
+  <div class= title>
+  <h1> About Us! <h1>
+  </div>
+  <div class = group>
+    <h2> Our Group <h2>
+    <p> We had a vision to create a music service where finding the perfect song for any moment was easy. Mood Music started as an idea and soon became a reality.
+  </div>
+  <div id = F class = "bio">
+    <h3> Feven Yared <h3>
+      <img src = file:///Users/feven/Downloads/feven.jpg id= FY >
+      <p> Hey :) My name is Feven, and I'm a senior at Lakeside School in Seattle, and I just got back from spending my junior year at School Year Abroad Spain. My favorite subjects are Spanish and Computer Science. In my free time I like to read dystopian novels and catch up on my favorite sci-fi TV shows.
+  </div>
+  <div id = R class = "bio">
+    <h3> Rusul Yaseen <h3>
+      <img src = file:///Users/feven/Downloads/IMG_3375.JPG id= FY >
+      <p> My name is Rusul Yaseen, I am 17 years old and a senior at Nathan Hale High School. I am a Middle Eastern female interested in Computer science and coding! I love going on social media and eating a lot of good spicy food! In my free time I like to watch Netflix and read books too! </p>
+  </div>
+<div id = A class = "bio">
+<h3> Azure Savage <h3>
+ <img src = file:///Users/feven/Downloads/IMG_3732.jpg id= FY >
+    <p> Hi! My name is Azure. I'm a junior at Garfield High School in Seattle. Even though I'm not exactly musically talented, music is a huge part of my life. Apart from Girls who code, I enjoy writing, spending with my friends, and being in the sun.
+</div>
+<div id="navbarName">
+        <a href="musicPlayer.html">MOOD MUSIC</a>
+        <a href="aboutPage.html">ABOUT US</a>
+        <a href="recsPage.html">OUR FAVORITE SONGS</a>
+</div>
+
+
+
+
+  <!--BACKGROUND CHANGING COLORS -->
+           <script language="JavaScript">
+             //CREDITS: http://www.javascriptkit.com/script/script2/backdisco.shtml ; Eliot Chan
+             //you can assign the initial color of the background here
+             r=255;
+             g=255;
+             b=255;
+             flag=0;
+             t=new Array;
+             o=new Array;
+             d=new Array;
+             function hex(a,c)
+             {
+             t[a]=Math.floor(c/16)
+             o[a]=c%16
+             switch (t[a])
+             {
+             case 10:
+             t[a]='A';
+             break;
+             case 11:
+             t[a]='B';
+             break;
+             case 12:
+             t[a]='C';
+             break;
+             case 13:
+             t[a]='D';
+             break;
+             case 14:
+             t[a]='E';
+             break;
+             case 15:
+             t[a]='F';
+             break;
+             default:
+             break;
+             }
+             switch (o[a])
+             {
+             case 10:
+             o[a]='A';
+             break;
+             case 11:
+             o[a]='B';
+             break;
+             case 12:
+             o[a]='C';
+             break;
+             case 13:
+             o[a]='D';
+             break;
+             case 14:
+             o[a]='E';
+             break;
+             case 15:
+             o[a]='F';
+             break;
+             default:
+             break;
+             }
+             }
+             function ran(a,c)
+             {
+             if ((Math.random()>2/3||c==0)&&c<255)
+             {
+             c++
+             d[a]=2;
+             }
+             else
+             {
+             if ((Math.random()<=1/2||c==255)&&c>0)
+             {
+             c--
+             d[a]=1;
+             }
+             else d[a]=0;
+             }
+             return c
+             }
+             function do_it(a,c)
+             {
+             if ((d[a]==2&&c<255)||c==0)
+             {
+             c++
+             d[a]=2
+             }
+             else
+             if ((d[a]==1&&c>0)||c==255)
+             {
+             c--;
+             d[a]=1;
+             }
+             if (a==3)
+             {
+             if (d[1]==0&&d[2]==0&&d[3]==0)
+             flag=1
+             }
+             return c
+             }
+             function disco()
+             {
+             if (flag==0)
+             {
+             r=ran(1, r);
+             g=ran(2, g);
+             b=ran(3, b);
+             hex(1,r)
+             hex(2,g)
+             hex(3,b)
+             document.body.style.background="#"+t[1]+o[1]+t[2]+o[2]+t[3]+o[3]
+             flag=50
+             }
+             else
+             {
+             r=do_it(1, r)
+             g=do_it(2,g)
+             b=do_it(3,b)
+             hex(1,r)
+             hex(2,g)
+             hex(3,b)
+             document.body.style.background="#"+t[1]+o[1]+t[2]+o[2]+t[3]+o[3]
+             flag--
+             }
+             setTimeout('disco()',40)
+             }
+             //-->
+             </script>
+             <body onload="disco()">
+
+</body>
+</html>
